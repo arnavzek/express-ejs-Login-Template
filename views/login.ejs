@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+    height: 100vh;
+}
+
+.container > input, .container > button {
+    display: flex;
+    text-align: center;
+    /* flex: 1; */
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    /* border-radius: 20px; */
+    width: 62%;
+    /* border: none; */
+}
+
+label{
+    flex-direction: row;
+    display: flex;
+}
+
+h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: tomato;
+}
+    </style>
+</head>
+
+<body>
+
+     
+     
+
+    <form class="container" action="/login" method="post">
+
+           
+   <% if(typeof error !== "undefined"){ %>
+       
+    <h3><%= error %></h3>
+<%}%>
+     
+      
+          <input type="text" placeholder="Enter Username" name="username" required>
+      
+
+          <input type="password" placeholder="Enter Password" name="password" required>
+      
+         
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> <span>Remember me</span>
+          </label>
+        
+        <button type="submit">Login</button>
+
+      </form>
+    
+</body>
+</html>
